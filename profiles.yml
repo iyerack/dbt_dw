@@ -1,0 +1,22 @@
+
+# For more information on how to configure this file, please see:
+# https://docs.getdbt.com/docs/profile
+
+
+my-snowflake-db:
+  target: stage
+  outputs:
+    stage:
+      type: snowflake
+      account: useready
+      
+      # User/password auth
+      user: adarshi
+      password: "Ruwan@9498"
+      
+      role: SYSADMIN
+      database: TEST_DB_DBT
+      warehouse: WEBINARDEMO
+      schema: FINANCE
+      threads: 1
+      client_session_keep_alive: False
